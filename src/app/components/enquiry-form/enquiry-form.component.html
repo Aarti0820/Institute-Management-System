@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  
+  <h2 class="text-center">📋 Enquiry List</h2>
+  <table class="table table-striped table-bordered shadow-lg">
+    <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let enquiry of enquiries">
+      <td>{{ enquiry.id }}</td>
+      <td>{{ enquiry.studentName }}</td>
+      <td>{{ enquiry.email }}</td>
+      <td>{{ enquiry.message }}</td>
+      <td>
+        <button class="btn btn-primary btn-sm me-2" (click)="viewEnquiryDetails(enquiry)">View</button>
+        <button class="btn btn-danger btn-sm"  (click)="deleteEnquiry(enquiry.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Display Selected Enquiry Details -->
+<div *ngIf="selectedEnquiry">
+  <h3>Enquiry Details</h3>
+  <p><strong>Name:</strong> {{ selectedEnquiry.studentName }}</p>
+  <p><strong>Email:</strong> {{ selectedEnquiry.email }}</p>
+  <p><strong>Message:</strong> {{ selectedEnquiry.message }}</p>
+  <button (click)="selectedEnquiry = null">Close</button>
+</div>

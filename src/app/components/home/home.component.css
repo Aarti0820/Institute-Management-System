@@ -1,0 +1,64 @@
+
+.hero {
+  width: 100vw;
+  height: 82vh;
+  position: relative;
+  background: url('/back_girl.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Dark Overlay for Better Readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust darkness */
+}
+
+/* Text and Button Styling */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-btn {
+  border: 2px solid white;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: white;
+  color: black !important;
+  transform: scale(1.05);
+}
+
+/* Explore Courses Button */
+.explore-btn {
+  background-color: #004080;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+  background-color: #002f5e;
+  transform: scale(1.1);
+}
+
+/* Smooth Page Load Animation */
+.hero h1, .hero p, .hero .btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

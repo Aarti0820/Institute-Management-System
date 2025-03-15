@@ -1,0 +1,74 @@
+/* Center the form */
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #003366, #0056b3); /* Blue gradient */
+  }
+  
+  /* Login Card */
+  .admin-login-card {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .admin-login-card h2 {
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .admin-login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  /* Focus effect */
+  .admin-login-card input:focus {
+    border-color: #FFA500; /* Orange */
+    box-shadow: 0px 0px 5px rgba(255, 165, 0, 0.7);
+    outline: none;
+  }
+  
+  /* Login Button */
+  .admin-login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFA500; /* Orange */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .admin-login-btn:hover {
+    background-color: #7B1FA2; /* Purple */
+  }
+  
+  /* Forgot Password */
+  .admin-login-card .forgot-password {
+    margin-top: 10px;
+    display: block;
+    color: #0056b3;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .admin-login-card .forgot-password:hover {
+    text-decoration: underline;
+  }
+  

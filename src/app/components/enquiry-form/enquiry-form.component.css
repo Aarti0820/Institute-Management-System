@@ -1,0 +1,50 @@
+/* Center the form */
+.enquiry-form {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Style inputs */
+.enquiry-form input, .enquiry-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style submit button */
+.enquiry-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enquiry-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+.enquiries-list {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.enquiries-list th, .enquiries-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.enquiries-list th {
+  background-color: #007bff;
+  color: white;
+}

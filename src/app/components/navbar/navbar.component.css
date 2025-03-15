@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #eaedf1, #0057b3); /* Smooth gradient */
+}
+
+.logo img {
+  height: 110px; /* Adjust as needed */
+  width: 220px; /* Maintain aspect ratio */
+  margin-left: 75px; /* Space between logo and text */
+  padding-top: 0px;
+}
+ 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-right: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid white;
+}
+
