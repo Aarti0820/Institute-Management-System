@@ -1,17 +1,30 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule
-import { CommonModule } from '@angular/common'; // ✅ Import CommonModule (required for Angular directives)
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { FormEnquiryService } from '../../form-enquiry.service';
 
 @Component({
   selector: 'app-form-enquiry',
-  standalone: true, // ✅ Mark it as a standalone component
+  standalone: true,
   templateUrl: './form-enquiry.component.html',
   styleUrls: ['./form-enquiry.component.css'],
-  imports: [FormsModule, CommonModule ,], // ✅ Import FormsModule here
+  imports: [FormsModule, CommonModule], // ✅ Ensure HttpClientModule is here
 })
 export class FormEnquiryComponent {
-  enquiry = { name: '', email: '', message: '' };
+  enquiry = {
+    studentName: '',
+    email: '',
+    phone: '',
+    address: '',
+    qualification: '',
+    branch: '',
+    passoutYear: '',
+    experience: '',
+    course: '',
+    admissionDate: '',
+    batchMode: '',
+    message: ''
+  };
 
   constructor(private enquiryService: FormEnquiryService) {}
 
@@ -19,11 +32,28 @@ export class FormEnquiryComponent {
     this.enquiryService.addEnquiry(this.enquiry).subscribe(
       (response) => {
         alert('Enquiry submitted successfully!');
-        this.enquiry = { name: '', email: '', message: '' }; // Reset form
+        this.resetForm();
       },
       (error) => {
         console.error('Error submitting enquiry:', error);
       }
     );
+  }
+
+  resetForm() {
+    this.enquiry = {
+      studentName: '',
+      email: '',
+      phone: '',
+      address: '',
+      qualification: '',
+      branch: '',
+      passoutYear: '',
+      experience: '',
+      course: '',
+      admissionDate: '',
+      batchMode: '',
+      message: ''
+    };
   }
 }

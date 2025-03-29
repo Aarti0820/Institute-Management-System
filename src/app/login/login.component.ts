@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule ],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -22,6 +24,9 @@ export class LoginComponent {
       alert('Invalid Email or Password');
     }
   }
+
+  togglePassword() {
+    let passwordField = document.getElementById("password") as HTMLInputElement;
+    passwordField.type = passwordField.type === "password" ? "text" : "password";
+  }
 }
-
-

@@ -1,13 +1,57 @@
+/* Set full page background */
+body {
+  background: url('/admin-login.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+
+}
+
+/* Center the login form on the right */
 .login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 82vh;
+  padding-right: 100px;
+}
+
+/* Style the login card */
+.login-card {
+  background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+  backdrop-filter: blur(5px); /* Glass effect */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.login-card h2{
+  color: azure;
+}
+
+/* Style input fields */
+.form-control {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Style Login button */
+.btn-login {
+  background: #c77885;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #857383;
+}
+
+/* Style the eye icon button */
+.input-group button {
+  border-radius: 0 5px 5px 0;
+  background: rgba(255, 255, 255, 0.5);
+}

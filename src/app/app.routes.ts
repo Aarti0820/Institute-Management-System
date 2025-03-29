@@ -11,10 +11,10 @@ export const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
   {path :'home' , component : HomeComponent},
   {path: 'admin-login' , component: LoginComponent},
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'enquiry', component: EnquiryFormComponent },
+  { path: 'readdata', component: EnquiryFormComponent },
   { path: 'admission', component: AdmissionFormComponent },
-  {path: 'form-enquiry' , component: FormEnquiryComponent}
+  {path: 'form-enquiry' , component: FormEnquiryComponent},
+  {path : 'dashboard' , component: DashboardComponent}
 
       
 ];

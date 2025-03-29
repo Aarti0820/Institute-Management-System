@@ -1,74 +1,136 @@
-/* Center the form */
-.admin-login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #003366, #0056b3); /* Blue gradient */
+html, body {
+  min-height: 70vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #155380 !important;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 60%; 
+  overflow-y: auto;
+}/* Full page styling */
+
+
+/* Form container */
+.container {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+  margin-top: 10px;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Input fields */
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ced4da;
+}
+
+/* Focus effect */
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Label styling */
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Submit button */
+.btn-primary {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+  transform: scale(1.05);
+}
+
+/* Row spacing */
+.row {
+  margin-bottom: 15px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* Login Card */
-  .admin-login-card {
-    background: white;
-    padding: 40px;
-    width: 350px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Heading */
-  .admin-login-card h2 {
-    color: #003366;
-    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 20px;
   }
-  
-  /* Input Fields */
-  .admin-login-card input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  /* Focus effect */
-  .admin-login-card input:focus {
-    border-color: #FFA500; /* Orange */
-    box-shadow: 0px 0px 5px rgba(255, 165, 0, 0.7);
-    outline: none;
-  }
-  
-  /* Login Button */
-  .admin-login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #FFA500; /* Orange */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .admin-login-btn:hover {
-    background-color: #7B1FA2; /* Purple */
-  }
-  
-  /* Forgot Password */
-  .admin-login-card .forgot-password {
-    margin-top: 10px;
-    display: block;
-    color: #0056b3;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .admin-login-card .forgot-password:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+
+.form-container {
+  width: 100%;
+  padding: 12px 0; 
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+}
+
+.input-group-text {
+  background: #f8f9fa;
+  border-radius: 8px 0 0 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+  transform: scale(1.05);
+}

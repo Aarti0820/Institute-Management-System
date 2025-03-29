@@ -1,13 +1,142 @@
-<h2>Enquiry Form</h2>
-<form (ngSubmit)="submitEnquiry()" #enquiryForm="ngForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" [(ngModel)]="enquiry.name" name="name" required />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" [(ngModel)]="enquiry.email" name="email" required />
+    <style>
+        /* Make sure there is no scroll */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
 
-  <label for="message">Message:</label>
-  <textarea id="message" [(ngModel)]="enquiry.message" name="message" required></textarea>
+        /* Background Image */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 82vh; /* Full viewport height */
+            background: url('/enquiry-img.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-  <button type="submit" [disabled]="!enquiryForm.valid">Submit</button>
-</form>
+        /* Form Styling */
+        .enquiry-form {
+          background: rgba(189, 195, 230, 0.7); /* Increased opacity */
+          backdrop-filter: blur(8px); /* Keep slight blur */
+          border-radius: 15px;
+          padding: 20px;
+          width: 70%;
+          max-height: 90vh;
+          overflow-y: auto;
+          box-shadow: 0 4px 10px rgba(17, 17, 17, 0.2); /* Added shadow */
+        }
+
+        /* Reduce input spacing */
+        input, select, textarea {
+            font-size: 14px;
+            padding: 6px;
+        }
+
+        /* Center Button */
+        .btn-submit {
+          background: linear-gradient(to right, #007bff, #0056b3); /* Gradient effect */
+          border: none;
+          color: white;
+        }
+        .btn-submit:hover {
+          background: linear-gradient(to right, #0056b3, #003f7f);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="enquiry-form">
+        <h2 class="text-center">Enquiry Form</h2>
+        <form (ngSubmit)="submitEnquiry()" #enquiryForm="ngForm">
+            
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Student Name:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.studentName" name="studentName" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Email:</label>
+                    <input type="email" class="form-control" [(ngModel)]="enquiry.email" name="email" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Phone:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.phone" name="phone" pattern="^[0-9]{10}$" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Address:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.address" name="address" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Qualification:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.qualification" name="qualification" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Branch:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.branch" name="branch" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Passout Year:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.passoutYear" name="passoutYear" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Experience:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.experience" name="experience" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Course:</label>
+                    <input type="text" class="form-control" [(ngModel)]="enquiry.course" name="course" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Admission Date:</label>
+                    <input type="date" class="form-control" [(ngModel)]="enquiry.admissionDate" name="admissionDate" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <label>Batch Mode:</label>
+                    <select class="form-control" [(ngModel)]="enquiry.batchMode" name="batchMode" required>
+                        <option value="">Select Mode</option>
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label>Message:</label>
+                    <textarea class="form-control" [(ngModel)]="enquiry.message" name="message"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" [disabled]="!enquiryForm.valid">Submit Enquiry</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

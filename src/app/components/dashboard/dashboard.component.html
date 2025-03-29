@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <h2>Dashboard Overview</h2>
+
+  <!-- BUTTONS SECTION -->
+  <div class="dashboard-buttons">
+    <button (click)="navigateToFees()" class="dashboard-btn">Fees Structure</button>
+    <button (click)="navigateToAdmission()" class="dashboard-btn">Admission Form</button>
+    <button (click)="navigateToStudents()" class="dashboard-btn">Total Students</button>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="charts-container">
+    <div class="chart">
+      <h3>📊 Admissions by Course</h3>
+      <ngx-charts-pie-chart 
+        [results]="admissionsChartData"
+        [view]="[400, 300]">
+      </ngx-charts-pie-chart>
+    </div>
+
+    <div class="chart">
+      <h3>📊 Enquiries by Course</h3>
+      <ngx-charts-pie-chart 
+        [results]="enquiriesChartData"
+        [view]="[400, 300]">
+      </ngx-charts-pie-chart>
+    </div>
+  </div>
+
+  <!-- RECENT ADMISSIONS -->
+  <div class="recent-admissions">
+    <h3>📄 Recent Admissions</h3>
+    <ul>
+      <li *ngFor="let admission of admissions">
+        {{ admission.studentName }} - {{ admission.course }}
+      </li>
+    </ul>
+  </div>
+</div>
